@@ -26,6 +26,13 @@ export const Root = () => (
             >
                     Блог
             </SC.Link>
+                        <SC.Link 
+                to='feedback'
+                as={NavLink}
+                className={({ isActive }) => isActive ? "active" : ""}
+            >
+                    Обратная связь
+            </SC.Link>
         </SC.Menu>
         <Outlet />
     </SC.Wrapper>    
