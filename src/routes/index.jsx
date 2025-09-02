@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Root } from "../components/Root";
+import { Error } from "../pages/error";
 import { Main } from "../pages/main";
 import { Posts } from "../pages/posts";
 import { Post } from "../pages/posts/components/Post";
@@ -11,6 +12,7 @@ export const routesConfig = [
     {
         path: '/',
         element: <Root />,
+        errorElement: <Error />,
         children: [
             {
                 index: true,

@@ -13,21 +13,21 @@ export const Root = () => (
                     Главная
             </SC.Link>
             <SC.Link 
-                to='posts'
+                to='/posts'
                 as={NavLink}
                 className={({ isActive }) => isActive ? "active" : ""} 
             >
                     Посты
             </SC.Link>
             <SC.Link 
-                to='blog'
+                to='/blog'
                 as={NavLink}
                 className={({ isActive }) => isActive ? "active" : ""}
             >
                     Блог
             </SC.Link>
                         <SC.Link 
-                to='feedback'
+                to='/feedback'
                 as={NavLink}
                 className={({ isActive }) => isActive ? "active" : ""}
             >
