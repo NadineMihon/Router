@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div `
+    max-width: 1000px;
+    width: 100%;
     text-align: center;
     margin: 30px auto;
     font-size: 30px;
@@ -10,10 +12,17 @@ export const Wrapper = styled.div `
     gap: 50px;
 `
 
+export const Header = styled.div `
+    position: relative;
+`
+
 export const Menu = styled.div `
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 25px;
+    justify-content: center;
 `
 
 export const Link = styled.a `
@@ -26,4 +35,10 @@ export const Link = styled.a `
     &.active {
         color: rgba(255, 142, 142, 1);
     }
+`
+
+export const Auth = styled.div `
+    position: absolute;
+    top: 0;
+    right: 20px;
 `

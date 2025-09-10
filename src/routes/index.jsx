@@ -7,6 +7,9 @@ import { Post } from "../pages/posts/components/Post";
 import { Blog } from "../pages/blog";
 import { BlogItem } from "../pages/blog/components/BlogItem";
 import { Feedback } from "../pages/feedback";
+import { Login } from "../pages/login";
+import { Protected } from "../pages/protected";
+import { CheckAuth } from "../components/CheckAuth";
 
 export const routesConfig = [
     {
@@ -19,27 +22,37 @@ export const routesConfig = [
                 element: <Main />
             },
             {
-                path: 'posts',
+                path: '/posts',
                 element: <Posts />
             },
             {
-                path: 'posts/:postId',
+                path: '/posts/:postId',
                 element: <Post />
             },
             {
-                path: 'blog',
+                path: '/blog',
                 element: <Blog />
             },
             {
-                path:'blog/:blogItemId',
+                path:'/blog/:blogItemId',
                 element: <BlogItem />
             },
             {
-                path: 'feedback',
+                path: '/feedback',
                 element: <Feedback />
-            }
+            },
+            {
+                path: '/protected',
+                element: <CheckAuth>
+                    <Protected />
+                </CheckAuth>
+            },
         ],
-    }
+    },
+    {
+        path: '/login',
+        element: <Login />
+    },
 ];
 
 export const appRouter = createBrowserRouter(routesConfig);
